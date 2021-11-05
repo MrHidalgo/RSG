@@ -1,0 +1,232 @@
+// SECTION :: START
+
+.product-filter {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #212e7d;
+
+	&__title {
+		text-align: center;
+		font: italic normal 300 36px/43px Panton;
+		color: #FFFFFF;
+	}
+
+	&__subtitle {
+		padding-bottom: 15px;
+		font: italic normal 300 20px/24px Panton;
+		color: #FFFFFF;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: space-between;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
+
+		> div {
+			width: 100%;
+			max-width: calc((100% - 45px) / 3);
+			@include adaptive(767) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.form-check-btn {
+		.form-check {
+			width: 100%;
+			max-width: calc((100% - 45px)/ 3);
+			padding-left: 0;
+			margin-left: 15px;
+			margin-bottom: 15px;
+			@include adaptive(767) {
+				max-width: 100%;
+			}
+
+			input[type='checkbox'] {
+				opacity: 0;
+				position: absolute;
+				width: 0;
+				height: 0;
+
+				&:checked {
+					& + label {
+						border-color: #C7006B;
+						background-color: #C7006B;
+					}
+				}
+			}
+
+			label {
+				cursor: pointer;
+				width: 100%;
+				border-color: #fff;
+				background-color: transparent;
+				@include adaptive(1023) {
+					font-size: 14px;
+				}
+			}
+
+			&__wrapper {
+				position: relative;
+				left: -15px;
+				display: flex;
+				flex-wrap: wrap;
+				width: calc(100% + 15px);
+			}
+		}
+	}
+
+	.form-check-check {
+		.form-check {
+			width: 100%;
+			max-width: calc((100% - 45px) / 3);
+			padding-left: 0;
+			margin-left: 15px;
+			margin-bottom: 30px;
+			@include adaptive(767) {
+				max-width: 100%;
+				margin-bottom: 15px;
+			}
+
+			input[type='checkbox'] {
+				opacity: 0;
+				position: absolute;
+				width: 0;
+				height: 0;
+
+				&:checked {
+					& + label {
+						&:after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			label {
+				cursor: pointer;
+				position: relative;
+				display: flex;
+				align-items: center;
+				min-height: 35px;
+				padding-left: 55px;
+				font: normal normal normal 20px/24px Panton;
+				letter-spacing: 0px;
+				color: #FFFFFF;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 35px;
+					height: 35px;
+					border: 1px solid #fff;
+				}
+
+				&:after {
+					content: '';
+					opacity: 0;
+					position: absolute;
+					top: 7px;
+					left: 7px;
+					width: 23px;
+					height: 12px;
+					border-bottom: 1px solid #fff;
+					border-left: 1px solid #fff;
+					background-color: transparent;
+					transform: rotate(-54deg);
+				}
+			}
+
+			&__wrapper {
+				position: relative;
+				left: -15px;
+				display: flex;
+				flex-wrap: wrap;
+				width: calc(100% + 15px);
+			}
+		}
+	}
+
+	.form-check-range {
+		&-wrapper {
+			display: flex;
+			flex-direction: column;
+			padding-top: 10px;
+
+			> div {
+				&:nth-of-type(2) {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding-top: 10px;
+
+					input[type='text'] {
+						outline: none;
+						position: relative;
+						display: flex;
+						width: 100px;
+						height: 35px;
+						padding: 0 15px;
+						border: 1px solid #fff;
+						border-radius: 0;
+						box-shadow: none;
+						background-color: transparent;
+						color: #ffffff;
+						@include inputPlaceholder {
+							color: #ffffff;
+						}
+
+						&[disabled] {
+							opacity: 0.45;
+							pointer-events: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.irs {
+		&.irs--sharp {
+			.irs-handle {
+				background-color: #c7006b;
+
+				> i {
+					&:nth-of-type(1) {
+						border-top-color: #c7006b;
+					}
+				}
+			}
+		}
+
+		&-max,
+		&-min {
+			opacity: 1;
+			background-color: transparent;
+		}
+
+		&-single {
+			background-color: #c7006b;
+
+			&:before {
+				border-top-color: #c7006b;
+			}
+		}
+
+		&-line {
+			background-color: #ffffff;
+		}
+
+		&-bar {
+			background-color: #c7006b;
+		}
+
+
+	}
+}
+
+// SECTION :: END

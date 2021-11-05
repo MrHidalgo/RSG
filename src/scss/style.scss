@@ -9,6 +9,7 @@
 
 @import "_components/services";
 @import "_components/n-features";
+@import "_components/product-filter";
 
 .check-list{
   list-style: none;
@@ -1387,6 +1388,34 @@
   @media(max-width: 991px){
     .plg-box{
       margin-bottom: 30px;
+    }
+  }
+}
+
+.button__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+
+  span {
+    display: block;
+    width: 100%;
+    max-width: 71px;
+    height: 1px;
+    background-color: #c7006b;
+  }
+
+  .button {
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: transparent;
+    color: #c7006b;
+
+    &:hover {
+      border-color: #212E7D;
+      background-color: #212E7D;
+      color: #ffffff;
     }
   }
 }
