@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Panton Icon A';
+  src: url('../font/panton-icon/Fontfabric - Panton Icons A Regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Panton Icon A Light';
+  src: url('../font/panton-icon/Fontfabric - Panton Icons A Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Panton Icon B';
+  src: url('../font/panton-icon/Fontfabric - Panton Icons B Regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Panton Icon B Light';
+  src: url('../font/panton-icon/Fontfabric - Panton Icons B Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Panton Icon C';
+  src: url('../font/panton-icon/Fontfabric - Panton Icons C Regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Panton Icon C Light';
+  src: url('../font/panton-icon/Fontfabric - Panton Icons C Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Panton Icon D';
+  src: url('../font/panton-icon/Fontfabric - Panton Icons D Regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Panton Icon D Light';
+  src: url('../font/panton-icon/Fontfabric - Panton Icons D Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+.icon{
+  position: relative;
+  display: inline-block;
+  font-style: normal;
+  font-size: 1em;
+
+  &.icon-phone:before{
+    font-family: 'Panton Icon B';
+    font-weight: 300;
+    content: 't';
+  }
+  &.icon-mobile:before{
+    font-family: 'Panton Icon A';
+    font-weight: 300;
+    content: 'C';
+  }
+
+  &.icon-fax:before{
+    font-family: 'Panton Icon B';
+    font-weight: 300;
+    content: 'm';
+  }
+  &.icon-mail:before{
+    font-family: 'Panton Icon B';
+    font-weight: 300;
+    content: 'a';
+  }
+
+  &.icon-search:before{
+    font-family: 'Panton Icon A';
+    font-weight: 300;
+    content: 'j';
+  }
+  &.icon-user:before{
+    font-family: 'Panton Icon A';
+    font-weight: 300;
+    content: 'q';
+  }
+  &.icon-message:before{
+    font-family: 'Panton Icon D';
+    font-weight: 300;
+    content: 'x';
+  }
+
+  &.icon-slider:before{
+    font-family: 'Panton Icon C';
+    font-weight: 300;
+    content: 'Q';
+  }
+  &.icon-gear:before{
+    font-family: 'Panton Icon C';
+    font-weight: 300;
+    content: 'i';
+  }
+  &.icon-book:before{
+    font-family: 'Panton Icon A';
+    font-weight: 300;
+    content: 'N';
+  }
+
+  &.icon-paper:before{
+    font-family: 'Panton Icon A Light';
+    font-weight: 300;
+    content: 'c';
+  }
+  &.icon-pencil:before{
+    font-family: 'Panton Icon C Light';
+    font-weight: 300;
+    content: 'u';
+  }
+  &.icon-calculator:before{
+    font-family: 'Panton Icon B Light';
+    font-weight: 300;
+    content: 'Z';
+  }
+  &.icon-chat:before{
+    font-family: 'Panton Icon B Light';
+    font-weight: 300;
+    content: 'j';
+  }
+  &.icon-box:before{
+    font-family: 'Panton Icon D Light';
+    font-weight: 300;
+    content: 'A';
+  }
+  &.icon-refresh:before{
+    font-family: 'Panton Icon D Light';
+    font-weight: 300;
+    content: 'J';
+  }
+
+
+  &.utf-icon-1:before{
+    font-family: 'Panton Icon D Light';
+    font-weight: 300;
+    content: 'y';
+  }
+  &.utf-icon-2:before{
+    font-family: 'Panton Icon D Light';
+    font-weight: 300;
+    content: 'g';
+  }
+  &.utf-icon-3:before{
+    font-family: 'Panton Icon C Light';
+    font-weight: 300;
+    content: 'r';
+  }
+
+  &.utf-icon-4:before{
+    font-family: 'Panton Icon C Light';
+    font-weight: 300;
+    content: 'j';
+  }
+  &.utf-icon-5:before{
+    font-family: 'Panton Icon B Light';
+    font-weight: 300;
+    content: 'x';
+  }
+  &.utf-icon-6:before{
+    font-family: 'Panton Icon A Light';
+    font-weight: 300;
+    content: 'v';
+  }
+
+  &.utf-icon-7:before{
+    font-family: 'Panton Icon A Light';
+    font-weight: 300;
+    content: 's';
+  }
+  &.utf-icon-8:before{
+    font-family: 'Panton Icon A Light';
+    font-weight: 300;
+    content: 'i';
+  }
+  &.utf-icon-9:before{
+    font-family: 'Panton Icon C Light';
+    font-weight: 300;
+    content: 'z';
+  }
+
+  &.icon-download:before{
+    font-family: 'Panton Icon C';
+    font-weight: 300;
+    content: 'g';
+  }
+
+  &.icon-angle-left:before{
+    font-family: 'Panton Icon D';
+    font-weight: 300;
+    content: 't';
+  }
+  &.icon-info:before{
+    font-family: 'Panton Icon D';
+    font-weight: 300;
+    content: 'B';
+  }
+  &.icon-info-light:before{
+    font-family: 'Panton Icon D Light';
+    font-weight: 300;
+    content: 'B';
+  }
+
+  &.icon-play:before{
+    font-family: 'Panton Icon C';
+    font-weight: 300;
+    content: 'M';
+  }
+  &.icon-hat:before{
+    font-family: 'Panton Icon B';
+    font-weight: 300;
+    content: 'D';
+  }
+}

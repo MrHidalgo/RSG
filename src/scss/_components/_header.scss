@@ -1,0 +1,254 @@
+#header{
+  padding-top: 14px;
+  padding-bottom: 14px;
+  box-shadow: 0 3px 6px #00000020;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 991;
+  background-color: #fff;
+}
+.menu-desktop{
+  .main-logo{
+    max-width: 198px;
+  }
+}
+.top-nav{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
+  &>li{
+    &.icon-link{
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+    &.language-selector{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &>a:not(:last-child):after{
+      display: inline-block;
+      font-family: 'Panton Icon D';
+      font-weight: 300;
+      content: 'u';
+      transform: rotate(90deg);
+      margin-left: 3px;
+    }
+
+    position: relative;
+    padding-left: 23px;
+    padding-right: 23px;
+
+    &:first-child{
+      padding-left: 0;
+    }
+
+    &:last-child{
+      padding-right: 0;
+    }
+
+
+    ul{
+      position: absolute;
+      display: none;
+    }
+  }
+}
+
+.language-selector{
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &:hover{
+    ul{
+      display: block;
+    }
+  }
+}
+
+.bottom-nav{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  li{
+
+    &:first-child{
+      a{
+        padding-left: 0;
+      }
+    }
+
+    &:last-child{
+      a{
+        padding-right: 0;
+      }
+    }
+
+    &.current{
+      &>a{
+        border-color: #C7006B;
+      }
+    }
+    a{
+      padding-left: 30px;
+      padding-right: 30px;
+      display: block;
+      border-bottom: 1px solid transparent;
+
+      &:hover,
+      &.current{
+        border-color: #C7006B;
+      }
+    }
+  }
+}
+
+.top-bar{
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+
+  .logo{
+    width: 137px;
+  }
+  .tb-action{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+
+    .icon-search{
+      font-size: 25px;
+    }
+  }
+}
+.menu-mobile{
+  .mobile-menu-toggle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 35px;
+    border: 0;
+    padding: 0;
+    background: none;
+    margin-left: 15px;
+
+    span{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background-color: #212E7D;
+      transition: all ease-in-out 100ms;
+
+      &:before,
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #212E7D;
+        transition: all ease-in-out 300ms;
+      }
+      &:before{
+        top: -8px;
+      }
+      &:after{
+        bottom: -8px;
+      }
+    }
+  }
+
+  &.open{
+    .mobile-menu-toggle span{
+      width: 25px;
+      background-color: transparent;
+      &:before,
+      &:after{
+        width: 25px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &:before{
+        top: 0;
+        bottom: 0;
+        transform: rotate(45deg);
+      }
+      &:after{
+        top: 0;
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .menu-content{
+      max-height: 80vh;
+      overflow: auto;
+    }
+  }
+
+  .menu-content{
+    transition: all ease-in-out 300ms;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-height: 0;
+    overflow: hidden;
+
+    &>div{
+      padding-top: 25px;
+    }
+
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0 0 35px;
+      text-align: right;
+      li{
+        margin-bottom: 5px;
+      }
+      &.main-nav{
+        li{
+          &.current{
+            &>a{
+              border-bottom: 1px solid #C7006B;
+            }
+          }
+          a{
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+      }
+
+      .icon{
+        font-size: 30px;
+      }
+    }
+  }
+
+}
+.header-shadow-el{
+  height: 97px;
+  @media(max-width: 991px){
+    height: 65px;
+  }
+}

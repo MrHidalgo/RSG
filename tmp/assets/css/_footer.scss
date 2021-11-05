@@ -1,0 +1,171 @@
+.footer-logo{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer-logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 193px;
+  height: auto;
+}
+
+.footer-logo-desktop{
+  max-width: 155px;
+  height: auto;
+}
+
+.footer-top{
+  padding-top: 35px;
+  background-color: #212E7D;
+  color: #fff;
+}
+
+.footer-bottom{
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media(max-width: 991px){
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+}
+
+.footer-widget{
+  margin-bottom: 35px;
+  font-family: "Panton", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 20px;
+
+  h2{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  h3{
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  address{
+    font-style: italic;
+  }
+
+  table{
+    tr{
+      td{
+        padding-right: 8px;
+        padding-bottom: 3px;
+      }
+
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .input-field{
+    margin-bottom: 10px;
+    border-color: #fff;
+
+    .input{
+      color: #fff;
+    }
+  }
+
+  .button{
+    background-color: #212E7D;
+    border-color: #212E7D;
+    padding-left: 0;
+    padding-right: 0;
+    &:hover{
+      color: #C7006B;
+    }
+  }
+
+  @media(min-width: 992px){
+    &.footer-widget-2{
+      padding-top: 25px;
+    }
+  }
+  @media(max-width: 991px){
+    margin-bottom: 70px;
+
+    &.footer-widget-3{
+      margin-bottom: 35px;
+    }
+  }
+
+}
+
+.footer-nav{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: "Frutiger LT Com", sans-serif;
+  font-weight: 300;
+
+  @media(min-width: 992px){
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+  li{
+    a{
+      display: block;
+      font-size: 16px;
+      color: #212E7D;
+    }
+
+    @media(min-width: 992px){
+      padding-left: 25px;
+      padding-right: 25px;
+      flex: 0 1 auto;
+
+      &:first-child{
+        padding-left: 0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+
+    @media(max-width: 991px){
+      flex: 0 1 100%;
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 20px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.chat-button{
+  position: fixed;
+  bottom: 28%;
+  right: 20px;
+  border: 0;
+  background: #C7006B;
+  color: #fff;
+  font-size: 32px;
+  width: 64px;
+  height: 64px;
+  z-index: 99;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &:hover{
+    background: #212E7D;
+  }
+}
