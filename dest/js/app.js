@@ -136,46 +136,27 @@ var initPreventBehavior = function initPreventBehavior() {
 			}
 		}
 
-		/*function inputFromCB (inputEl, instanceEl) {
-  	let val = $(inputEl).prop("value");
-  	
-  	if (val < instanceEl.options.min) {
-  		val = instanceEl.options.min;
-  	} else if (val > instanceEl.options.to) {
-  		val = instanceEl.options.to;
-  	}
-  	
-  	instanceEl.update({from: val});
-  	$(inputEl).prop("value", val);
-  }
-  function inputToCB (inputEl, instanceEl) {
-  	var val = $(inputEl).prop("value");
-  	
-  	if (val < instanceEl.options.from) {
-  		val = instanceEl.options.from;
-  	} else if (val > instanceEl.options.max) {
-  		val = instanceEl.options.max;
-  	}
-  	
-  	instanceEl.update({to: val});
-  	$(inputEl).prop("value", val);
-  }*/
+		function inputFromCB(inputEl, instanceEl) {
+			var val = $(inputEl).prop("value");
+
+			if (val < instanceEl.options.min) {
+				val = instanceEl.options.min;
+			} else if (val > instanceEl.options.to) {
+				val = instanceEl.options.to;
+			}
+
+			instanceEl.update({ from: val });
+			$(inputEl).prop("value", val);
+		}
 
 		range1.ionRangeSlider({
 			skin: "sharp",
-			min: 0,
-			max: 50,
-			from: 15,
 			grid: true,
 			block: true
 		});
 
 		range2.ionRangeSlider({
 			skin: "sharp",
-			min: 0,
-			max: 6,
-			step: 1,
-			from: 1,
 			grid: true,
 			block: true
 		});
@@ -191,11 +172,19 @@ var initPreventBehavior = function initPreventBehavior() {
 			checkedCB(ev.currentTarget, range2_instance, '[range2-input-min-js], [range2-input-max-js]');
 		});
 
-		/*rangeInputMin1.on("input", (ev) => inputFromCB(rangeInputMin1, range1_instance));
-  rangeInputMax1.on("input", (ev) => inputToCB(rangeInputMax1, range1_instance));
-  
-  rangeInputMin2.on("input", (ev) => inputFromCB(rangeInputMin2, range2_instance));
-  rangeInputMax2.on("input", (ev) => inputToCB(rangeInputMax2, range2_instance));*/
+		rangeInputMin1.on("input", function (ev) {
+			return inputFromCB(rangeInputMin1, range1_instance);
+		});
+		rangeInputMax1.on("input", function (ev) {
+			return inputFromCB(rangeInputMax1, range1_instance);
+		});
+
+		rangeInputMin2.on("input", function (ev) {
+			return inputFromCB(rangeInputMin2, range2_instance);
+		});
+		rangeInputMax2.on("input", function (ev) {
+			return inputFromCB(rangeInputMax2, range2_instance);
+		});
 	};
 	/*
  * CALLBACK :: end
